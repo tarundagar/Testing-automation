@@ -92,7 +92,7 @@ def dijkstra_with_path(graph, start, end):
         current = previous[current]
     path.reverse()
     
-    return distances[end], path if path[0] == start else None
+    return distances[end], path if path and path[0] == start else None
 
 
 if __name__ == "__main__":

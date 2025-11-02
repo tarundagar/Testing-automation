@@ -92,6 +92,9 @@ def matrix_scalar_multiply(matrix, scalar):
     Returns:
         Matrix multiplied by scalar
     """
+    if not matrix:
+        return []
+    
     rows, cols = len(matrix), len(matrix[0])
     result = [[matrix[i][j] * scalar for j in range(cols)] for i in range(rows)]
     return result
